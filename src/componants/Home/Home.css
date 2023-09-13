@@ -17,6 +17,9 @@ body{
     height: 330px;
     border: 1px solid gray;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(131, 120, 120);
+    
 
 }
 .card-img{

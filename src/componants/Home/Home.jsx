@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import '../Cart/Cart';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
 
@@ -34,7 +35,7 @@ const Home = () => {
                 allActors.map((actor) =>(
                     <div key={actor.id} className='card'>
                     <div className='card-img'>
-                    <img className='photo' src="https://i.ibb.co/J5bfPrZ/16926.jpg" alt="" />
+                    <img className='photo' src={actor.image} alt="" />
                     </div>
                     <br />
  
@@ -56,7 +57,7 @@ const Home = () => {
                 </div>
 
                 <div className="cart">
-                    <h1>this is cart</h1>
+                    <Cart selectedActors ={selectedActors}></Cart>
                 </div>
             </div>
             
