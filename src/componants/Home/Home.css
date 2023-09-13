@@ -1,0 +1,51 @@
+/* .container{
+    background-color: red;
+} */
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background:url('https://i.ibb.co/JB1y0X5/4690.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+.card{
+    width:250px;
+    height: 330px;
+    border: 1px solid gray;
+    justify-content: center;
+
+}
+.card-img{
+    width: 20px;
+    height: 20px;
+    
+}
+
+.photo{
+    width: 80px;
+    border-radius: 50px;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-btn{
+    background-color: rgb(6, 80, 80);
+}
+
+.home-container{
+    display: flex;
+}
+
+.card-container{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
