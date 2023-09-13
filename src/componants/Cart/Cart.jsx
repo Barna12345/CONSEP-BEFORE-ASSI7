@@ -13,7 +13,7 @@ const Cart = ({selectedActors}) => {
 
             {
             selectedActors.map((actor) => (
-                <li>{actor.name}</li>
+                <li key={actor}>{actor.name}</li>
             ) )
         }
         </div>

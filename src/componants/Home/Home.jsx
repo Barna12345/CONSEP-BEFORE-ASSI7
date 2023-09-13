@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-self-assign */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
@@ -20,8 +22,18 @@ const Home = () => {
 
      const handleSelectActor=(actor) =>{
 
+        const isExist=selectedActors.find((item)=>item.id== actor.id);
+
+        if(isExist){
+          return alert ("Already booked")
+        }
+
+        // console.log(isExist);
+
         // console.log(actor)
-        setSelectedActors([...selectedActors,actor]);
+        else{
+            setSelectedActors([...selectedActors,actor]);
+        }
 
      }
      console.log(selectedActors);
