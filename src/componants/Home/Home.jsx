@@ -6,15 +6,24 @@ import '../Cart/Cart';
 
 const Home = () => {
 
-    const [allActors, setAllactors] = useState([]);
+    const [allActors, setAllActors] = useState([]);
+
+    const[selectedActors, setSelectedActors] = useState([]);
 
      useEffect(() => {
         fetch("./data.json")
         .then(res => res.json())
-        .then((data) => setAllactors(data))
+        .then((data) => setAllActors(data))
 
      },[]);
-    //  console.log(allActors);
+
+     const handleSelectActor=(actor) =>{
+
+        // console.log(actor)
+        setSelectedActors([...selectedActors,actor]);
+
+     }
+     console.log(selectedActors);
 
     return (
         <div className='container'>
@@ -37,7 +46,7 @@ const Home = () => {
  
                         <p>{actor.role}</p>
                     </div>
-                    <button className='card-btn'>select</button>
+                    <button onClick={() => handleSelectActor(actor)} className='card-btn'>select</button>
  
                 </div>
                 ))
